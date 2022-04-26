@@ -10,7 +10,7 @@
         name: "{{ rule_name }}"
       register: rule_info
 
-    - name: disable rule by id
+    - name: change rule by id
       qradar_rule:
         state: "{{ rule_state }}"
         id: "{{ rule_info.rules[0]['id'] }}"
